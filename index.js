@@ -5,11 +5,10 @@
  */
 
 const Tesseract = xrequire('tesseract');
-const credentials = xrequire('./settings/credentials.json');
 const configurations = xrequire('./settings/config.json');
 const Manager = new Tesseract.ShardingManager('./bastion.js', {
   totalShards: configurations.shardCount,
-  token: credentials.token
+ client.login(process.env.BOT_TOKEN);
 });
 const log = xrequire('./handlers/logHandler');
 
