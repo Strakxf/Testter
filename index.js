@@ -1,14 +1,15 @@
 /**
  * @file The starting point of Bastion
- * @author SonnyK (a.k.a Strak)
+ * @author Sankarsan Kampa (a.k.a k3rn31p4nic)
  * @license GPL-3.0
  */
 
 const Tesseract = xrequire('tesseract');
+const credentials = xrequire('./settings/credentials.json');
 const configurations = xrequire('./settings/config.json');
 const Manager = new Tesseract.ShardingManager('./bastion.js', {
   totalShards: configurations.shardCount,
- client.login(process.env.BOT_TOKEN);
+  token: credentials.token
 });
 const log = xrequire('./handlers/logHandler');
 
